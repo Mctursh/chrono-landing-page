@@ -9,6 +9,11 @@ module.exports = {
         'text-gradient': 'background: linear-gradient(155.23deg, #061012 20.76%, rgba(6, 16, 18, 0) 49.04%)',
         'green-dotted': "url('/public/green-dotted.svg')",
         'dark-dotted': "url('/public/dark-dotted.svg')",
+      },
+      fontFamily: {
+        'grotesk': ['Space Grotesk'],
+        'suisse': ['suisse'],
+        'neubit': ['neubit'],
       }
     },
     colors: {
@@ -21,8 +26,8 @@ module.exports = {
       'green': '#065546',
       'yellow': '#FFC806',
       'dark-green': '#06FFC324',
+      'faq-green': '#04261E',
     }
   },
   plugins: [],
 }
-

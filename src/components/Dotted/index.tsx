@@ -8,7 +8,7 @@ interface DottedBorderProp extends PropsWithChildren {
 
 const DottedBorder: FC<DottedBorderProp> = ({ className = '', variant = "green" }) => {
   return (
-    <div className={classNames(`${variant == 'green' ? 'bg-green-dotted' : 'bg-dark-dotted'} bg-repeat-y`, className)}></div>
+    <div className={classNames(`${variant === 'green' ? 'bg-green-dotted' : 'bg-dark-dotted'} bg-repeat-y bg-cover`, className)}></div>
   )
 }
 

@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'text-gradient': 'background: linear-gradient(155.23deg, #061012 20.76%, rgba(6, 16, 18, 0) 49.04%)',
+        'text-gradient': 'linear-gradient(179.77deg, #061012 1.76%, rgba(6, 16, 18, 0) 85.04%)',
         'green-dotted': "url('/public/green-dotted.svg')",
         'dark-dotted': "url('/public/dark-dotted.svg')",
       },

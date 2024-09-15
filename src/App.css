@@ -11,3 +11,31 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.breathing-title {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+
+
+.scroll-down-ease{
+  transition: height .3s ease-in-out;
+}
+
+.grid-lines {
+  position: relative;
+  width: 100%;
+  background-image:
+    linear-gradient(to right, #bababa0a 1px, transparent 1px),
+    linear-gradient(to bottom, #bababa0a 1px, transparent 1px);
+  background-size: 25px 25px;
+  z-index: 2;
+}

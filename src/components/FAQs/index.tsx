@@ -7,7 +7,7 @@ import classNames from "classnames"
 const FAQs = () => {
     const [activeIndex, setActiveIndex] = useState<Number>(-1)
     const handleToggle = (idx: number) => {
-        setActiveIndex(prev => prev == idx ? -1 : idx)
+        setActiveIndex(prev => prev === idx ? -1 : idx)
     }
   return (
     <section id="faqs" className="flex flex-col gap-y-2 mt-32 mb-40">
@@ -20,7 +20,10 @@ const FAQs = () => {
         
         <div className="flex flex-col mt-4">
             {faqs.map((faq, idx) => {
-                return <div key={idx} className="border-b border-primary bg-faq-green px-6">
+                return <div key={idx} className={classNames(
+                    "border-b border-primary bg-faq-green px-6 scroll-down-ease",
+                    activeIndex == idx ? 'h-[237px]' : 'h-[99px]'
+                    )}>
                 <div className="flex justify-between items-center">
                     <p className={classNames(
                         "text-white font-normal text-xl font-suisse",

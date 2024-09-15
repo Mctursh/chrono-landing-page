@@ -1,16 +1,37 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import DottedBorder from '../Dotted'
 
 const Hero = () => {
+  const [date, setDate] = useState<Date>(new Date())
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDate(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [])
+
+
+  const formatTime = (time: Date) => {
+    const day = String(time.getDate()).padStart(2, '0');
+    const month = String(time.getMonth() + 1).padStart(2, '0');
+    const year = String(time.getFullYear()).slice(-2);
+    const hours = String(time.getHours()).padStart(2, '0');
+    const minutes = String(time.getMinutes()).padStart(2, '0');
+    const seconds = String(time.getSeconds()).padStart(2, '0');
+
+    return `${day}/${month}/${year}/${hours}:${minutes}:${seconds}`;
+  };
+  
   return (
     <div>
-        <div className="flex justify-center items-center mb-12">
+        <div className="flex justify-center items-center mb-6">
             <h1 className="font-neubit text-primary px-4 py-3 bg-green-bg border border-primary font-bold text-7xl">HACKATHON</h1>
         </div>
         <div className="flex flex-col">
-            <p className="text-primary font-bold text-4xl mb-1 tracking-widest font-neubit">01/08/09/14:00:54</p>
-            <div className="border border-primary px-16 pt-16 pb-32 w-100 relative">
-                <img src="timeline.svg" alt="timeline" />
+            <p className="text-primary font-bold text-4xl mb-1 tracking-widest font-neubit">{formatTime(date)}</p>
+            <div className="border border-primary px-16 pt-4 pb-12 w-100 relative">
+                <img className='object-cover breathing-title' src="timeline1.svg" alt="timeline" />
                 <img src='x.svg' alt='x icon' className='absolute right-0 top-0 p-4 bg-green-bg color-primary font-bold text-4xl text-white' />
             </div>
             <div className='flex z-10 justify-center translate-y-[-40%]' >

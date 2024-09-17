@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+body{
+  background-color: #061012;
+}
+
 .breathing-title {
   animation-name: floating;
   animation-duration: 3s;

@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import classNames from "classnames";
 
 const SDKs = () => {
-    const [activeTab, setActiveTab] = useState('rust')
+    const [activeTab, setActiveTab] = useState('ts')
     const tsCode = `import { initializeMint } from “@chronotokens/sdk”`.split(" ");
     const rustCode = `use chronotokens_sdk::initialize_mint;`.split(" ");
     const tsWordsToHighlight = ["{", "initializeMint", "}", '“@chronotokens/sdk”'];
